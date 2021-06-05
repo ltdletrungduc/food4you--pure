@@ -94,7 +94,7 @@
                         <div class='banner__content-wrapper'>
                             <div class='question font-AD'>are you hungry?</div>
                             <div class='message font-FTG'>dont wait!</div>
-                            <div class='suggestion bold-font'>
+                            <div class='suggest bold-font'>
                                 let start to order food now
                             </div>
                             <div class='line'></div>
@@ -110,7 +110,7 @@
                 </div>
                 <div id='parallelogram'></div>
             </section>
-            <section class="promo">
+            <section class="promo --pd">
                 <div class="container">
                     <div class="section__title promo__title">
                         <h2 class='font-FTG'>choose &amp; enjoy</h2>
@@ -173,18 +173,20 @@
                     </div>
                 </div>
             </section>
-            <section class="discover">
-                <div class="section__title discover__title">
-                    <h3 class="bold-font">discorver</h3>
-                    <h2 class="font-FTG">upcoming events</h2>
-                </div>
-                <div class="section__des discover__des">
-                    <p class="main-font">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-                        ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-                        accumsan lacus vel facilisis.
-                    </p>
+            <section class="discover --pd">
+                <div class="container">
+                    <div class="section__title discover__title">
+                        <h3 class="bold-font">discorver</h3>
+                        <h2 class="font-FTG">upcoming events</h2>
+                    </div>
+                    <div class="section__des discover__des">
+                        <p class="main-font">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+                            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+                            accumsan lacus vel facilisis.
+                        </p>
+                    </div>
                 </div>
                 <div class="section__content discover__content">
                     <div class="upcoming">
@@ -217,24 +219,119 @@
                                 <div class="img-container">
                                     <img src="images/suggestion_1.jpg" alt="SUGGESTION NAME">
                                 </div>
+                                <div class="suggestion__item-text">
+                                    <p class="title">try it today</p>
+                                    <p class="des">most popular pasta</p>
+                                </div>
                             </div>
                             <div class="suggestion__item">
                                 <div class="img-container">
                                     <img src="images/suggestion_2.jpg" alt="SUGGESTION NAME">
+                                </div>
+                                <div class="suggestion__item-text">
+                                    <p class="title">try it today</p>
+                                    <p class="des">more fun more taste</p>
                                 </div>
                             </div>
                             <div class="suggestion__item">
                                 <div class="img-container">
                                     <img src="images/suggestion_3.jpg" alt="SUGGESTION NAME">
                                 </div>
+                                <div class="suggestion__item-text">
+                                    <p class="title">try it today</p>
+                                    <p class="des">fresh & chilli</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <section class="reservation">
+                <div class="container">
+                    <div class="section__title reservation__title">
+                        <h3 class="bold-font">reservation</h3>
+                        <h2 class="font-FTG">book your table</h2>
+                    </div>
+                    <div class="reservation__form">
+                        <form class="reservation__form-wrapper col-xl-8 offset-xl-2">
+                            <input type="text" name="customer-name" placeholder="Name">
+                            <input type="text" name="customer-phone" placeholder="Phone">
+                            <input type="text" name="booking-date" placeholder="Date" onfocus="(this.type='date')"
+                                onfocusout="(this.type='text')">
+                            <select name="booking-time">
+                                <option hidden disabled selected value>Time</option>
+                                <optgroup label="Lunch">
+                                    <option value="lunch1">11:00AM</option>
+                                    <option value="lunch2">1:00PM</option>
+                                </optgroup>
+                                <optgroup label="Dinner">
+                                    <option value="dinner1">5:00PM</option>
+                                    <option value="dinner2">8:00PM</option>
+                                </optgroup>
+                            </select>
+                            <input type="number" name="customer-num" placeholder="#of Guests" min="0">
+                            <button type="submit"><span>find a table</span></button>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
-
+            <div class="container">
+                <div class="logo-footer">
+                    <div class="svg-container">
+                        <img src="images/icons/logo.svg" alt="LOGO" class="inline-svg">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="describe">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna
+                            aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viver ra maecenas accumsan
+                            lacus
+                            vel facilisis.</p>
+                    </div>
+                    <div class="info">
+                        <div class="info__item">
+                            <div class="svg-container">
+                                <img src="images/icons/pin.svg" alt="Location" class="inline-svg">
+                            </div>
+                            <p>Main Road, Building Name, Country</p>
+                        </div>
+                        <div class="info__item">
+                            <div class="svg-container">
+                                <img src="images/icons/email.svg" alt="Location" class="inline-svg">
+                            </div>
+                            <p>email@companyname.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-line">
+                    <div class="copy-right">&copy; Design by Freepik and DucLe 2021. All rights reserved.</div>
+                    <div class="social">
+                        <div class="social__item --instagram">
+                            <div class="svg-container">
+                                <img src="images/icons/instagram.svg" alt="" class="inline-svg">
+                            </div>
+                        </div>
+                        <div class="social__item --facebook">
+                            <div class="svg-container">
+                                <img src="images/icons/facebook.svg" alt="" class="inline-svg">
+                            </div>
+                        </div>
+                        <div class="social__item --twitter">
+                            <div class="svg-container">
+                                <img src="images/icons/twitter.svg" alt="" class="inline-svg">
+                            </div>
+                        </div>
+                        <div class="social__item --whatsapp">
+                            <div class="svg-container">
+                                <img src="images/icons/whatsapp.svg" alt="" class="inline-svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
         <script src="dest/main.min.js"></script>
         <script src="js/main.js"></script>
