@@ -7,8 +7,16 @@
 // 		AOS.init();
 // 	}, 1234);
 // }
-svgToInline(".inline-svg");
 
+svgToInline(".inline-svg");
+// const convertStyle = () => {
+// 	const height = $(window).innerHeight();
+// 	console.log(height);
+// 	$(".homepage .banner").css({
+// 		height: `${height}px`,
+// 	});
+// };
+// $(convertStyle);
 // EVENTS IMAGE 3D SLIDER
 $(".slider-3D input").on("change", function () {
 	const thisId = $(this).attr("id");
@@ -44,15 +52,9 @@ $(".slider-3D input").on("change", function () {
 });
 
 // FIX 100vh in SAFARI Problem
-const convertStyle = () => {
-	const height = $(window).innerHeight();
-	console.log(height);
-	$(".homepage .banner").css({
-		height: `${height}px`,
-	});
-};
+
 // $(window).on("resize", convertStyle);
-$(convertStyle);
+
 // // BACK TO TOP
 // const $backToTop = $("footer .back-to-top");
 // $backToTop.on("click", function () {
