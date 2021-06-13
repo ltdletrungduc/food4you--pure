@@ -42,6 +42,17 @@ $(".slider-3D input").on("change", function () {
 			.addClass("right");
 	}
 });
+
+// FIX 100vh in SAFARI Problem
+const convertStyle = () => {
+	const height = $(window).innerHeight();
+	console.log(height);
+	$(".homepage .banner").css({
+		height: `${height}px`,
+	});
+};
+// $(window).on("resize", convertStyle);
+$(convertStyle);
 // // BACK TO TOP
 // const $backToTop = $("footer .back-to-top");
 // $backToTop.on("click", function () {
