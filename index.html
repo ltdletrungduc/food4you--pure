@@ -53,13 +53,8 @@
                         </div>
 
                     </div>
-                    <div class="burger">
-                        <div id="menu_button">
-                            <input type="checkbox" id="menu_checkbox">
-                            <label for="menu_checkbox" id="menu_label">
-                                <div id="menu_text_bar"></div>
-                            </label>
-                        </div>
+                    <div class="burger" id="burger">
+                        <div class="burger__slice"></div>
                     </div>
                 </div>
                 <div class="nav">
@@ -88,7 +83,36 @@
                 </div>
             </div>
         </header>
-        <nav>
+        <nav class="sidenav">
+            <div class="control">
+                <div class="close-nav" id="close-nav">
+                    <span></span>
+                </div>
+            </div>
+            <div class="wrapper">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="./">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="./menu.html">
+                            Menu
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="./ourstory.html">
+                            Our Story
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="./contact.html">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <main class="homepage">
             <section class="banner">

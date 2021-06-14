@@ -9,14 +9,7 @@
 // }
 
 svgToInline(".inline-svg");
-// const convertStyle = () => {
-// 	const height = $(window).innerHeight();
-// 	console.log(height);
-// 	$(".homepage .banner").css({
-// 		height: `${height}px`,
-// 	});
-// };
-// $(convertStyle);
+
 // EVENTS IMAGE 3D SLIDER
 $(".slider-3D input").on("change", function () {
 	const thisId = $(this).attr("id");
@@ -51,10 +44,28 @@ $(".slider-3D input").on("change", function () {
 	}
 });
 
-// FIX 100vh in SAFARI Problem
+// SIDENAV LOGIC
+const sideNav = $("nav.sidenav");
+$(document).on("click", "#burger", function () {
+	openSideNav();
+});
+$(document).on("click", "#close-nav", function () {
+	closeSideNav();
+});
+$(document).on("keydown", function (event) {
+	if (event.key === "Escape") {
+		closeSideNav();
+	}
+});
+const openSideNav = () => {
+	sideNav.addClass("active");
+	$("main, footer").addClass("nav-active");
+};
 
-// $(window).on("resize", convertStyle);
-
+const closeSideNav = () => {
+	sideNav.removeClass("active");
+	$("main, footer").removeClass("nav-active");
+};
 // // BACK TO TOP
 // const $backToTop = $("footer .back-to-top");
 // $backToTop.on("click", function () {
