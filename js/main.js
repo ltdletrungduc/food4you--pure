@@ -9,6 +9,24 @@
 // }
 
 svgToInline(".inline-svg");
+$(window).on("load", function () {
+	loadingAnimation();
+	if (window.matchMedia("(max-width: 1366px)").matches) {
+		// The viewport is less than 1366 pixels wide
+		setViewHeight(true);
+	} else {
+		setViewHeight(false);
+	}
+	closeSideNav();
+});
+const loadingAnimation = () => {};
+const setViewHeight = (condition) => {
+	let value = "100vh";
+	if (condition) {
+		value = `${window.innerHeight}px`;
+	}
+	document.documentElement.style.setProperty("--viewHeight", value);
+};
 
 // EVENTS IMAGE 3D SLIDER
 $(".slider-3D input").on("change", function () {
