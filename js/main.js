@@ -61,11 +61,40 @@ const openSideNav = () => {
 	sideNav.addClass("active");
 	$("main, footer").addClass("nav-active");
 };
-
 const closeSideNav = () => {
 	sideNav.removeClass("active");
 	$("main, footer").removeClass("nav-active");
 };
+
+// STYLING HEADER ON SCROLL
+
+const header = $("header.header");
+// let lastScollPos = 0;
+const headerStyling = (window) => {
+	let scrollTop = window.scrollTop();
+	// console.log(scrollTop + " " + lastScollPos);
+	// if (scrollTop > lastScollPos) {
+	// 	// downscroll code
+	// 	if (scrollTop > 150) {
+	// 		header.removeClass("hide");
+	// 		header.addClass("hide");
+	// 	}
+	// } else {
+	// 	// upscroll code
+	// 	header.removeClass("hide");
+	// }
+	if (scrollTop <= 50) {
+		header.removeClass("active");
+	} else {
+		header.addClass("active");
+	}
+	// lastScollPos = scrollTop;
+};
+$(document).on("scroll", function () {
+	console.log("TEST");
+	headerStyling($(this));
+	closeSideNav();
+});
 // // BACK TO TOP
 // const $backToTop = $("footer .back-to-top");
 // $backToTop.on("click", function () {
