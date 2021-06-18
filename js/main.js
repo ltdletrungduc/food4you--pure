@@ -9,13 +9,15 @@
 // }
 
 svgToInline(".inline-svg");
-$(window).on("load", function () {
+$(function () {
 	loadingAnimation();
 	if (window.matchMedia("(max-width: 1366px)").matches) {
 		// The viewport is less than 1366 pixels wide
 		setViewHeight(true);
+		console.log("TRUE");
 	} else {
 		setViewHeight(false);
+		console.log("FALSE");
 	}
 	closeSideNav();
 });
@@ -87,39 +89,35 @@ const closeSideNav = () => {
 // STYLING HEADER ON SCROLL
 
 const header = $("header.header");
-// let lastScollPos = 0;
 const headerStyling = (window) => {
 	let scrollTop = window.scrollTop();
-	// console.log(scrollTop + " " + lastScollPos);
-	// if (scrollTop > lastScollPos) {
-	// 	// downscroll code
-	// 	if (scrollTop > 150) {
-	// 		header.removeClass("hide");
-	// 		header.addClass("hide");
-	// 	}
-	// } else {
-	// 	// upscroll code
-	// 	header.removeClass("hide");
-	// }
 	if (scrollTop <= 50) {
 		header.removeClass("active");
 	} else {
 		header.addClass("active");
 	}
-	// lastScollPos = scrollTop;
 };
 $(document).on("scroll", function () {
-	console.log("TEST");
 	headerStyling($(this));
 	closeSideNav();
 });
-// // BACK TO TOP
-// const $backToTop = $("footer .back-to-top");
-// $backToTop.on("click", function () {
-// 	//1 second of animation time
-// 	//html works for FFX but not Chrome
-// 	//body works for Chrome but not FFX
-// 	//This strange selector seems to work universally
-// 	// THANKS TO "Explosion Pills"
-// 	$("html, body").animate({ scrollTop: 0 }, 1000);
-// });
+// SCROLL TO TOP
+const $scrollToTop = $("#scroll-to-top");
+let bannerHeight = $(".homepage .banner").height();
+$(document).on("scroll", function handleScroll() {
+	console.log(bannerHeight);
+	console.log($(document).scrollTop());
+	if ($(document).scrollTop() > bannerHeight * 1.1) {
+		$scrollToTop.removeClass("deactive");
+	} else {
+		$scrollToTop.addClass("deactive");
+	}
+});
+$scrollToTop.on("click", function () {
+	let scrollTime = $(document).scrollTop() / 2;
+	//html works for FFX but not Chrome
+	//body works for Chrome but not FFX
+	//This strange selector seems to work universally
+	// THANKS TO "Explosion Pills"
+	$("html, body").animate({ scrollTop: 0 }, Math.min(2000, scrollTime));
+});
