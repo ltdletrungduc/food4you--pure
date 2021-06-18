@@ -105,8 +105,6 @@ $(document).on("scroll", function () {
 const $scrollToTop = $("#scroll-to-top");
 let bannerHeight = $(".homepage .banner").height();
 $(document).on("scroll", function handleScroll() {
-	console.log(bannerHeight);
-	console.log($(document).scrollTop());
 	if ($(document).scrollTop() > bannerHeight * 1.1) {
 		$scrollToTop.removeClass("deactive");
 	} else {
