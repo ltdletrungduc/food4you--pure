@@ -5,7 +5,13 @@ This is my personal web project
 ## Installation
 
 This project only contain HTML,CSS,JS and resouce (img,svg).
-You just clone it and run.
+
+You just clone it and run
+
+```terninal
+npm install
+npm start
+```
 
 ## Contributing
 

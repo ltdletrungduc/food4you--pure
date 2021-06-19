@@ -31,7 +31,8 @@ const setViewHeight = (condition) => {
 };
 
 // EVENTS IMAGE 3D SLIDER
-$(".slider-3D input").on("change", function () {
+const $inputSlider = $(".slider-3D input");
+$inputSlider.on("change", function () {
 	const thisId = $(this).attr("id");
 	const left = $(".slider-3D label.left");
 	const right = $(".slider-3D label.right");
@@ -63,6 +64,12 @@ $(".slider-3D input").on("change", function () {
 			.addClass("right");
 	}
 });
+$inputSlider.on("keydown", function (event) {
+	let conditionValues = ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"];
+	if (conditionValues.includes(event.key)) {
+		event.preventDefault();
+	}
+});
 
 // SIDENAV LOGIC
 const sideNav = $("nav.sidenav");
@@ -87,7 +94,6 @@ const closeSideNav = () => {
 };
 
 // STYLING HEADER ON SCROLL
-
 const header = $("header.header");
 const headerStyling = (window) => {
 	let scrollTop = window.scrollTop();
